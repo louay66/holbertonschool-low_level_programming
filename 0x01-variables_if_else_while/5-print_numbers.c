@@ -13,7 +13,7 @@ int main(void)
 	do
 
 	{
-	printf("%d", ch);
+	printf("%d", ch, "\n");
 	ch++;
 	}
 
