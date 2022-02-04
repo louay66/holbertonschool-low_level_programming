@@ -19,14 +19,14 @@ int main(void)
 	{
 		putchar(a + '0');
 		putchar(b + '0');
-		if (i < 89)
+		if (i < 100)
 		{
 			putchar(44);
 			putchar(32);
 		}
 
 	}
-	i++;
+	 i++;
 	}
 	putchar('\n');
 	return (0);
