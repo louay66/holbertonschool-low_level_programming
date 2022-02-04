@@ -19,7 +19,7 @@ int main(void)
 	{
 		putchar(a + '0');
 		putchar(b + '0');
-		if (i < 100)
+		if (i < 98)
 		{
 			putchar(44);
 			putchar(32);
