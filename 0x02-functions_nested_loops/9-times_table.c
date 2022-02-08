@@ -37,7 +37,7 @@ void times_table(void)
 	}
 	else
 	{
-		_putchars('\n');
+		_putchar('\n');
 	}
 	}
 }
