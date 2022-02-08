@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 /**
- * print_alphabet - writes the character c to stdou
+ * print_alphabet_x10 - writes the character c to stdou
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
