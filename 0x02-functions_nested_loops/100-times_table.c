@@ -8,7 +8,7 @@
  */
 void print_times_table(int n)
 {
-	int a, b, c, d, e;
+	int a, b, c, d, e ,f;
 
 	for (a = 0 ; a < n ; a++)
 	{
@@ -44,7 +44,7 @@ void print_times_table(int n)
 		}
 			else
 		{
-			_putchar('\n')
+			_putchar('\n');
 			}
 	}
 	}
