@@ -10,7 +10,7 @@
 int main(void)
 {
 
-		unsigned long  n, b = 1, c = 0;
+		unsigned long a, n, b = 1, c = 0;
 
 		do
 
@@ -20,10 +20,13 @@ int main(void)
 		b = n;
 		if (n % 2 == 0)
 		{
-		printf("%lu\n", n);
+			a = a + n;
 		}
+		c = b;
+		b = n;
 	}
 		while (n < 2500000);
+		printf("%lu\n", h);
 
 	return (0);
 }
