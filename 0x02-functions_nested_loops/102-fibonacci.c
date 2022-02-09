@@ -8,14 +8,22 @@
  */
 int main(void)
 {
-	int a, n, b = 1, c = 0;
+	unsigned long  n, b = 1, c = 0;
+	int a;
 
 	for (a = 0 ; a < 50 ; a++)
 	{
 		n = b + c;
-		printf("%d, ", n);
+		printf("%d", n);
 		c = b;
 		b = n;
+		if (a == 49)
+		{
+			printf('\n');
+		}
+		else
+		{
+		printf(", ");
 	}
 	return (0);
 }
