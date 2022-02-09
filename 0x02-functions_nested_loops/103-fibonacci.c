@@ -16,8 +16,6 @@ int main(void)
 
 	{
 		n = b + c;
-		c = b;
-		b = n;
 		if (n % 2 == 0)
 		{
 			a = a + n;
