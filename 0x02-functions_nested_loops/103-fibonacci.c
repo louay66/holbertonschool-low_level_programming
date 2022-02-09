@@ -26,7 +26,7 @@ int main(void)
 		b = n;
 	}
 		while (n < 2500000);
-		printf("%lu\n", h);
+		printf("%lu\n", a);
 
 	return (0);
 }
