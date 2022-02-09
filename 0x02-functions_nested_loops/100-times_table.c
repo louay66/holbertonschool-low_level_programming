@@ -8,7 +8,7 @@
  */
 void print_times_table(int n)
 {
-	int a, b, c, d, e, f;
+	int a, b, c, d, e, f, g;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -24,6 +24,7 @@ void print_times_table(int n)
 			f = c / 100;
 			d = c / 10;
 			e = c % 10;
+			g = d % 10;
 			if (c < 10)
 			{
 			_putchar(' ');
@@ -40,7 +41,7 @@ void print_times_table(int n)
 		else
 		{
 		_putchar('0' + f);
-		_putchar('0' + d);
+		_putchar('0' + g);
 		_putchar('0' + e);
 		}
 		if (b < n)
