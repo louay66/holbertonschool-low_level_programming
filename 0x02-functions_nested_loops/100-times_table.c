@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * times_table - times table
- * @n : The character to input
+ * print_times_table - times table n
+ * @n: The character to input
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
