@@ -8,15 +8,15 @@
  */
 void print_times_table(int n)
 {
-	int a, b, c, d, e ,f;
+	int a, b, c, d, e, f;
 
-	if ( n >= 0 && n <=15)
-	{
-		
-	for (a = 0 ; a <= n ; a++)
+	if (n >= 0 && n <= 15)
 	{
 
-		for (b = 0 ; b <= n ; b++)
+		for (a = 0 ; a <= n ; a++)
+		{
+		_putchar('0');
+		for (b = 1 ; b <= n ; b++)
 		{
 			c = a * b;
 			f = c / 100;
@@ -50,8 +50,7 @@ void print_times_table(int n)
 		{
 			_putchar('\n');
 			}
-	}
-	}
+		}
+		}
 	}
 }
-
