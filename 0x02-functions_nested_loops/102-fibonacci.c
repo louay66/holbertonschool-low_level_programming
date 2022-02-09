@@ -19,11 +19,12 @@ int main(void)
 		b = n;
 		if (a == 49)
 		{
-			printf('\n');
+			printf("\n");
 		}
 		else
 		{
 		printf(", ");
 	}
 	return (0);
+}
 }
