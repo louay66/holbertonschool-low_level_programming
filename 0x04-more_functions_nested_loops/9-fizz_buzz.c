@@ -10,7 +10,7 @@ int main(void)
 {
 	int a;
 
-	for (a = 1 ; a < 100 ; a++)
+	for (a = 1 ; a <= 100 ; a++)
 	{
 		if (a % 15 == 0)
 		{
@@ -18,18 +18,18 @@ int main(void)
 		}
 		else if (a % 3 == 0)
 		{
-			printf("fizz ");
+			printf("Fizz ");
 		}
 		else if (a % 5 == 0)
 		{
-			printf("buzz ");
+			printf("Buzz ");
 		}
 		else
 		{
 			printf("%d ", a);
 		}
 	}
-	printf("Buzz");
+	
 	printf("\n");
 	return (0);
 }
