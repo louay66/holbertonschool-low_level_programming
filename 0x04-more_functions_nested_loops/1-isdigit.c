@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "main1.h"
+#include "main.h"
 
 /**
  * _isdigit - only digt
