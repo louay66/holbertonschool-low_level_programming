@@ -12,13 +12,13 @@ char *_strcpy(char *dest, char *src)
 {
 	int a, b;
 
-	for (a = 0 ; sec[a] != '\0' ; a++)
+	for (a = 0 ; src[a] != '\0' ; a++)
 	{
 	}
 	for (b = 0 ; b < a ; b++)
 	{
-		dest[a] = sec[a];
+		dest[a] = src[a];
 	}
-	dest[i] = '\0';
+	dest[a] = '\0';
 	return (dest);
 }
