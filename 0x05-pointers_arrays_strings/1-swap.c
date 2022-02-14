@@ -2,8 +2,9 @@
 #include "main.h"
 
 /**
- *reset_to_98 - writes the character n to stdout
- *@n: pointer
+ *swap_int - a and b tow pointer
+ *@a:first pointer
+ *@b:second pointer
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
