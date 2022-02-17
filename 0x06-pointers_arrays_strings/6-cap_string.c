@@ -1,37 +1,27 @@
-#include <unistd.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- **cap_string-src overwrite in dest
- *@aa:input
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * *cap_string - check the code
+ *@s: pointer
+ * Return: Always 0.
  */
-char *cap_string(char *aa)
+char *cap_string(char *s)
 {
-	int i;
+	int a = 0, i;
+	int r = 13;
+	char n[] = {32, '\t', '\n', 59, 33, 63, 34, '(', ')', '{', '}', 44, 46};
 
-	for (i = 0 ; aa[i] != '\0' ; i++)
+	while (s[a])
 	{
-		if (i == 0)
+		i = 0;
+		while (i < r)
 		{
-			if ((aa[i] >= 97 && aa[i] <= 122))
-				aa[i] = aa[i] - 32;
-		}
-		else if (aa[i] == ' ')
-		{
+			if ((a == 0 || s[a - 1] == n[i]) && (s[a] >= 97 && s[a] <= 122))
+				s[a] -= 32;
 			i++;
-			if (aa[i] >= 'a' && aa[i] <= 'z')
-			{
-				aa[i] = aa[i] - 32;
-			}
 		}
-		else
-		{
-			if (aa[i] >= 'A' && aa[i] <= 'Z')
-				aa[i] = aa[i] + 32;
-		}
+		a++;
 	}
-	return (aa);
+	return (s);
 }
-
