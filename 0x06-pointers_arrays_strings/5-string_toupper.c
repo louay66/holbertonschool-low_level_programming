@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  *string_toupper- change lowercase to upercase
- *@string:pointer
+ *@a:pointer
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
@@ -11,7 +11,7 @@ char *string_toupper(char *a)
 {
 	int i;
 
-	for(i = 0 ;a[i] != '\0' ;  i++)
+	for (i = 0 ; a[i] != '\0' ;  i++)
 	{
 		if (a[i] >= 97 && a[i] <= 122)
 		{
