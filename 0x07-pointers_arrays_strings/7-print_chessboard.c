@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * print_chessboard - print chessbord
- *@a tow dimensionel array
+ *@a: tow dimensionel array
  * Return: void
  */
 void print_chessboard(char (*a)[8])
