@@ -4,8 +4,7 @@
 /**
  * print_chessboard - print chessbord
  *@: tow dimensionel array
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: void
  */
 void print_chessboard(char (*a)[8])
 {
