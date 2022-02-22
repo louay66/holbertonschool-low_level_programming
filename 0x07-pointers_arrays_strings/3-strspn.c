@@ -2,15 +2,15 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *_strspn - The strspn() function returns the length of the initial substring of the string pointed to by str1 that is made up of only those character contained in the string pointed to by str2
+ *_strspn - the string pointed to by str1 that is made up
  *@s:string to be scanned
- *@accept:string containing the 
+ *@accept:string containing the
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i , j;
+	int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
