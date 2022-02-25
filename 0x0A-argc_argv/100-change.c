@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- *  * main - print the minimum number of coins to make change
- *   * @argc: int
- *    * @argv: string
- *     * Return: int
- *      */
+ * main - print the minimum number of coins to make change
+ * @argc: int
+ * @argv: string
+ * Return: int
+ */
 
 int main(int argc, char *argv[])
 {
