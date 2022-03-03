@@ -2,10 +2,12 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-/* _calloc - allocate an array
- * @nmemb:int
- * @size:int
- * Return:void
+/**
+ *_calloc - allocaited memoire
+ *@nmemb:number  
+ *@size:number
+ * Return: On success 1.
+ *On error, -1 is returned, and errno is set appropriately.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
