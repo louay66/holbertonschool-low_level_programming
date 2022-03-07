@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *string_nconcat - connected two string
+ *init_dog - initialize strcur
  *@d:new strufdct
  *@name:name of dog
  *@owner:ownerof dog
