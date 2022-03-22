@@ -15,7 +15,7 @@ void free_listint2(listint_t **head)
 		return;
 	cnode = *head;
 
-	while (cnode != NULL)
+	while (cnode)
 	{
 		nnode = cnode;
 		cnode = cnode->next;
