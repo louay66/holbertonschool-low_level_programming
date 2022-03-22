@@ -3,16 +3,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *free_list-free strctur
+ *free_listint-free strctur
  *@head:node
  * Return: void
  */
-void free_list(list_t *head)
+void free_listint(listint_t *head)
 {
-	while (head != NULL)
-	{
-		free(head->n);
-		free(head);
-		head = head->next;
-	}
+	listint_t *temp
+		while (head != NULL)
+		{ 
+			temp = head;
+			head = head->next;
+			free(temp);
+		}
 }
