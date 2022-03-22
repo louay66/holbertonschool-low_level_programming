@@ -10,21 +10,21 @@
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *inode = head;
 	unsigned int count = 0;
 
-	if (head->next == NULL)
-		return (NULL);
-	while (head != NULL)
+	while (count < index)
 	{
-		if (count == index)
+		if (head->next == NULL)
 		{
-			inode->n = head->n;
+			return (NULL);
 		}
-		count++;
-		head = head->next;
+		else
+		{
+			count++;
+			head = head->next;
+		}
 	}
-	return (inode);
+	return (head);
 }
 
 
