@@ -12,7 +12,7 @@ void free_listint2(listint_t **head)
 	listint_t *nnode, *cnode;
 
 	cnode = *head;
-	if (cnode == NULL)
+	if (head == NULL)
 		return;
 
 	while (cnode != NULL)
