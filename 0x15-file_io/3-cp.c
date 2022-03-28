@@ -35,8 +35,8 @@ void cp(const char *file_from, const char *file_to)
 		exit(98);
 	}
 	fdt = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	siz = read(fdf, buff, 1024);
-	while (siz > 0)
+	
+	while ((siz = read(fdf, buff, 1024)) > 0)
 	{
 		if (write(fdt, buff, siz) != siz || fdt == -1)
 		{
