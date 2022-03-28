@@ -37,17 +37,25 @@ void cp(const char *file_from, const char *file_to)
 	}
 	fdt = open(file_to, O_RDWR | O_CREAT | O_TRUNC, 0664);
 	siz = read(fdf, buff, 1024);
-		if (siz == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-			exit(98);
-		}
-	if (siz == 0 || fdt == -1)
+	if (siz == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", file_to);
-		exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
 	}
-	write(fdt, buff, siz);
+	while (siz > 0)
+	{
+		if (write(fdt, buff, siz) != siz || fdt == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", file_to);
+			exit(99);
+		}
+
+	}
+	if (siz == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
 	if (close(fdf) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdf);
