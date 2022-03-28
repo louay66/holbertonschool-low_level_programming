@@ -42,7 +42,7 @@ void cp(const char *file_from, const char *file_to)
 	{
 		if (write(fdt, buff, siz) != siz || fdt == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to  %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 
