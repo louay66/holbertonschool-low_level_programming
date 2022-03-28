@@ -34,7 +34,10 @@ void cp(const char *file_from, const char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
+
+
 	fdt = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+
 	while ((siz = read(fdf, buff, 1024)) > 0)
 	{
 		if (write(fdt, buff, siz) != siz || fdt == -1)
@@ -44,6 +47,7 @@ void cp(const char *file_from, const char *file_to)
 		}
 
 	}
+
 	if (siz == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
