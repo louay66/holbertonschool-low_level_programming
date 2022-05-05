@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_dnodeint - add node
+ * get_dnodeint_at_index - get node
  * @head:dubel linked list
  * @index:index of node
  * Return: newnode
