@@ -1,37 +1,4 @@
 #include "hash_tables.h"
-
-/**
- * replace_value - replaces the value in the  key exist
- * @ht: double pointer to the hash_node_t list
- * @key: new key to add in the node
- * @value: value to add in the node
- */
-void replace_value(hash_node_t **ht, const char *key, const char *value)
-{
-	hash_node_t *t = *ht;
-
-	while (t && strcmp(t->key, key))
-		t = t->next;
-	free(t->value);
-	t->value = strdup(value);
-}
-/**
- * check_key - checks if a key exists in a hash table
- * @ht: pointer to the hash_node_t list
- * @key: key to look for
- *
- * Return: 1 if the key is found, 0 otherwise
- */
-int check_key(hash_node_t *ht, const char *key)
-{
-	while (ht)
-	{
-		if (!strcmp(ht->key, key))
-			return (1);
-		ht = ht->next;
-	}
-	return (0);
-}
 /**
  * add_node - adds a new node at the beginning of a linked list
  * @h: double pointer to the hash_node_t list
@@ -40,26 +7,34 @@ int check_key(hash_node_t *ht, const char *key)
  *
  * Return: the address of the new element, or NULL if it fails
  */
-hash_node_t *add_node(hash_node_t **h, const char *key, const char *value)
+hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 {
-	hash_node_t *new;
+	hash_node_t *tmp;
 
-	new = malloc(sizeof(hash_node_t));
-	if (!new)
+	tmp = *head;
+
+	while (tmp != NULL)
+	{
+		if (strcmp(key, tmp->key) == 0)
+		{
+			free(tmp->value);
+			tmp->value = strdup(value);
+			return (*head);
+		}
+		tmp = tmp->next;
+	}
+
+	tmp = malloc(sizeof(hash_node_t));
+
+	if (tmp == NULL)
 		return (NULL);
-	new->key = strdup(key);
-	new->value = strdup(value);
-	if (*h)
-	{
-		(*h) = new;
-		new->next = NULL;
-	}
-	else
-	{
-		new->next = (*h);
-		(*h) = new;
-	}
-	return (*h);
+
+	tmp->key = strdup(key);
+	tmp->value = strdup(value);
+	tmp->next = *head;
+	*head = tmp;
+
+	return (*head);
 }
 /**
  * hash_table_set - adds an element to the hash table
@@ -73,17 +48,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 
-	if (!ht || !key || !strcmp(key, "") || !value)
+	if (ht == NULL)
+		return (0);
+
+	if (key == NULL || *key == '\0')
 		return (0);
 
 	index = key_index((unsigned char *)key, ht->size);
-	if (check_key(ht->array[index], key))
-	{
-		replace_value(&ht->array[index], key, value);
-		return (1);
-	}
-	add_node(&ht->array[index], key, value);
-	if (&ht->array[index])
+
+	if (add_node(&(ht->array[index]), key, value) == NULL)
 		return (0);
+
 	return (1);
 }
