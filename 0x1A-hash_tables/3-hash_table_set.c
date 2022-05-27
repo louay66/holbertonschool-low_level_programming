@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 /**
  * add_node - adds a new node at the beginning of a linked list
- * @h: double pointer to the hash_node_t list
+ * @head: double pointer to the hash_node_t list
  * @key: new key to add in the node
  * @value: value to add in the node
  *
