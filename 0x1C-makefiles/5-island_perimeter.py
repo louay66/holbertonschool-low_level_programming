@@ -4,6 +4,7 @@ perimeter of the island described in grid"""
 
 
 def island_perimeter(grid):
+    """function return perimeter"""
 
     sum = 0
     for i in range(len(grid)):
@@ -15,6 +16,7 @@ def island_perimeter(grid):
 
 
 def execute(grid, i, j):
+    """check how many 1 around current 1"""
     sum = 0
 
     if grid[i][j + 1] == 1:
