@@ -22,13 +22,13 @@ def execute(grid, i, j):
     """check how many 1 around current 1"""
     sum = 0
 
-    if grid[i][j + 1] == 1:
+    if len(grid[i]) > j + 1 and grid[i][j + 1] == 1:
         sum += 1
-    if grid[i][j - 1] == 1:
+    if j > 0 and grid[i][j - 1] == 1:
         sum += 1
-    if grid[i + 1][j] == 1:
+    if len(grid) > i + 1 and grid[i + 1][j] == 1:
         sum += 1
-    if grid[i - 1][j] == 1:
+    if i > 0 and grid[i - 1][j] == 1:
         sum += 1
 
     return (4 - sum)
