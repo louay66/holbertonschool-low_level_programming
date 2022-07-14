@@ -7,10 +7,13 @@ def island_perimeter(grid):
     """function return perimeter"""
 
     sum = 0
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
-            if grid[i][j] == 1:
-                sum += execute(grid, i, j)
+    if grid is None:
+        return None
+    else:
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j] == 1:
+                    sum += execute(grid, i, j)
 
     return sum
 
