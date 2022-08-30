@@ -4,6 +4,7 @@
  * @array: array i want to search inside it
  * @size: size of array
  * @value: value i search it
+ *
  * Return: if value out of range return -1
  * else return index
  */
